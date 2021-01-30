@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <title>Meu Primeiro Jogo</title>
+	<link rel="stylesheet" href="Stylo.css">
+	<script type="text/javascript" src="java.js"></script>
+  </head>
+  <body onload="NovoPers()">
+	<div class="row">
+		<div class="row center">
+			<p>PERSONAGEM</p>
+			<div class="input-field">
+				<p><input id="nome_jogador" placeholder="Nome do Personagem" type="text" required></p>
+				<!-- c + largura + altura -->
+				<table id="t1">		
+					<tr id="tr1" style="width:100px">
+						<th id="c00" style="height:20px; width:20px; background-color:white;"></th>
+						<th id="c10" style="height:20px; width:20px; background-color:white;"></th>
+						<th id="c20" style="height:20px; width:20px; background-color:white;"></th>
+						<th id="c30" style="height:20px; width:20px; background-color:white;"></th>
+						<th id="c40" style="height:20px; width:20px; background-color:white;"></th>
+					</tr>
+					<tr id="tr2" style="width:100px">
+						<th id="c01" style="height:20px; width:20px; background-color:white;"></th>
+						<th id="c11" style="height:20px; width:20px; background-color:white;"></th>
+						<th id="c21" style="height:20px; width:20px; background-color:white;"></th>
+						<th id="c31" style="height:20px; width:20px; background-color:white;"></th>
+						<th id="c41" style="height:20px; width:20px; background-color:white;"></th>
+					</tr>
+					<tr id="tr3">
+						<th id="c02" style="height:20px; width:20px; background-color:white;"></th>
+						<th id="c12" style="height:20px; width:20px; background-color:white;"></th>
+						<th id="c22" style="height:20px; width:20px; background-color:white;"></th>
+						<th id="c32" style="height:20px; width:20px; background-color:white;"></th>
+						<th id="c42" style="height:20px; width:20px; background-color:white;"></th>
+					</tr>
+					<tr id="tr4">
+						<th id="c03" style="height:20px; width:20px; background-color:white;"></th>
+						<th id="c13" style="height:20px; width:20px; background-color:white;"></th>
+						<th id="c23" style="height:20px; width:20px; background-color:white;"></th>
+						<th id="c33" style="height:20px; width:20px; background-color:white;"></th>
+						<th id="c43" style="height:20px; width:20px; background-color:white;"></th>
+					</tr>
+					<tr id="tr5">
+						<th id="c04" style="height:20px; width:20px; background-color:white;"></th>
+						<th id="c14" style="height:20px; width:20px; background-color:white;"></th>
+						<th id="c24" style="height:20px; width:20px; background-color:white;"></th>
+						<th id="c34" style="height:20px; width:20px; background-color:white;"></th>
+						<th id="c44" style="height:20px; width:20px; background-color:white;"></th>
+					</tr>
+					<tr id="tr6">
+						<th id="c05" style="height:20px; width:20px; background-color:white;"></th>
+						<th id="c15" style="height:20px; width:20px; background-color:white;"></th>
+						<th id="c25" style="height:20px; width:20px; background-color:white;"></th>
+						<th id="c35" style="height:20px; width:20px; background-color:white;"></th>
+						<th id="c45" style="height:20px; width:20px; background-color:white;"></th>
+					</tr>
+					<tr id="tr7">
+						<th id="c06" style="height:20px; width:20px; background-color:white;"></th>
+						<th id="c16" style="height:20px; width:20px; background-color:white;"></th>
+						<th id="c26" style="height:20px; width:20px; background-color:white;"></th>
+						<th id="c36" style="height:20px; width:20px; background-color:white;"></th>
+						<th id="c46" style="height:20px; width:20px; background-color:white;"></th>
+					</tr>
+					<tr id="tr8">
+						<th id="c07" style="height:20px; width:20px; background-color:white;"></th>
+						<th id="c17" style="height:20px; width:20px; background-color:white;"></th>
+						<th id="c27" style="height:20px; width:20px; background-color:white;"></th>
+						<th id="c37" style="height:20px; width:20px; background-color:white;"></th>
+						<th id="c47" style="height:20px; width:20px; background-color:white;"></th>
+					</tr>
+				</table>
+			</div>
+			<div class="input-field">
+				<p>
+					<label>
+						<input id="rad-man" name="sexo" type="radio" v-model="sexo" value="1" onclick="muda(1)"/>
+						<span>Man</span>
+						<input class="with-gap" name="sexo" type="radio" v-model="sexo" value="2" onclick="muda(2)"/>
+						<span>Woman</span>
+					</label>
+				</p>
+				<p>
+					<label>
+						<input id="rad-humano" name="raca" type="radio"  v-model="raca" value="1" onclick="muda(3)"/>
+						<span>Humano</span>
+						<input class="with-gap" name="raca" type="radio"  v-model="raca" value="2" onclick="muda(4)"/>
+						<span>Anão</span>
+						<input class="with-gap" name="raca" type="radio"  v-model="raca" value="3" onclick="muda(5)"/>
+						<span>Elfo</span>
+					</label>
+				</p>
+				<p>
+					<label>
+						<input id="rad-idade" name="idade" type="radio"  v-model="idade" value="1" onclick="muda(6)"/>
+						<span>Adolecente</span>
+						<input class="with-gap" name="idade" type="radio"  v-model="idade" value="2" onclick="muda(7)"/>
+						<span>Adulto</span>
+						<input class="with-gap" name="idade" type="radio"  v-model="idade" value="3" onclick="muda(8)"/>
+						<span>Velho</span>
+					</label>
+				</p>
+			</div>
+			<div class="input-field">
+				<p>
+					<input type="button" id="myBtn" onclick="pula()" value="PULAR">
+				</p>
+			</div>
+		</div>
+	</div>
+  </body>
+</html>

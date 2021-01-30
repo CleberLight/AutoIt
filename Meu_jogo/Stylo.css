@@ -1,0 +1,12 @@
+html {
+}
+
+.row {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+}
+
+table{
+	border: 1px solid black;
+}
